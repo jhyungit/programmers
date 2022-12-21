@@ -1,4 +1,4 @@
-# # https://school.programmers.co.kr/learn/courses/30/lessons/17682
+# https://school.programmers.co.kr/learn/courses/30/lessons/17682
 
 def solution(dartResult):
     answer = 0
@@ -37,6 +37,7 @@ def solution(dartResult):
 
     return print(answer)
 
+# 10처리 시 .replace('10', 'K') 와 같은 것 이용 가능
 
 # solution("1S2D*3T") # 37
 # solution("1D2S#10S") # 9
