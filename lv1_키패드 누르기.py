@@ -12,7 +12,6 @@ def get_dis(number, pos):
     pos = str(pos)
 
     x_number, y_number = key_pos[number]
-
     x_pos, y_pos = key_pos[pos]
 
     return abs(x_number-x_pos) + abs(y_number-y_pos)

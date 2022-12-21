@@ -15,7 +15,7 @@ def solution(N, stages):
         
     fail_list = sorted(fail_dict.items(), key = lambda x : x[1], reverse= True)
     answer = [ info[0] for info in fail_list]
-        
+
     return print(answer)
 
 # solution(5, [2, 1, 2, 6, 2, 4, 3, 3])

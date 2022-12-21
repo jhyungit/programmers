@@ -1,7 +1,6 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/17682
 
 def solution(dartResult):
-    answer = 0
     score = set(i for i in range(11))
     area = {'S' : 1, 'D': 2, 'T' : 3}
     new = []
@@ -33,9 +32,7 @@ def solution(dartResult):
                 new[-1] = -new[-1]
             num = 0
 
-    answer = sum(new)
-
-    return print(answer)
+    return print(sum(new))
 
 # 10처리 시 .replace('10', 'K') 와 같은 것 이용 가능
 

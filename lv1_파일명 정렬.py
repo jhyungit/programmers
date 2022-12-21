@@ -1,6 +1,4 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/17686?language=python3
-
-# 함수 작성
 import re
 
 def solution(files):
