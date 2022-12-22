@@ -6,9 +6,7 @@ def solution(board, moves):
 
     for m in moves:
         for i in range(len(board)):
-            if board[i][m-1] == 0:
-                pass
-            else:
+            if board[i][m-1] != 0:
                 bucket.append(board[i][m-1])
                 board[i][m-1] = 0
                 if len(bucket) >= 2:
