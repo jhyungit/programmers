@@ -26,7 +26,7 @@ def solution(new_id):
 
     new_id = re.sub(r'\.+', '.', new_id) # 3단계
 
-    # 4단계 한 번에 가능한 방법 정규식 활용
+    # 4-1, 4-2 한 번에 가능한 방법 정규식 활용
     # new_id = re.sub('^[.]|[.]$', '', new_id)
     if len(new_id) != 0 and new_id[0] == ".":
         new_id = new_id[1:] # 4-1단계
