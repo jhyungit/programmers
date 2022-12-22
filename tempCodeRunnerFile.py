@@ -1,1 +1,0 @@
-print(i, len(x[i]))
