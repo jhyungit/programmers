@@ -1,24 +1,35 @@
-# # https://school.programmers.co.kr/learn/courses/30/lessons/12951
+# https://school.programmers.co.kr/learn/courses/30/lessons/12951
 
-# def solution(s):
-#     answer = ''
-#     s = s.split(" ")
-
-#     while '' in s:
-#         s.remove('')
+def solution(s):
+    answer = ''
+    li = []
+    b_li = []
+    blank = 0
     
-#     for i in s:
-#         if i[0] in "0123456789":
-#             pass
-#         else:
-#             print(i[0].upper())
-#     print(s)
+    for a in s.split():
+        answer += a[0].upper()
+        answer += a[1:].lower()
+        li.append(answer)
+        answer = ''
 
+    for b in s:
+        if b == ' ':
+            blank += 1
+        else:
+            if blank != 0:
+                b_li.append(blank)
+            blank = 0
+    b_li.append(blank)
+            
+    cnt = 0
+    for i in li:
+        if len(li)-1 != cnt:
+            answer += i + (' ' * b_li[cnt])
+        else:
+            answer += i + (' ' * b_li[cnt])
+        cnt += 1
 
-#     return print(answer)
+    return print(len(answer))
 
-# solution("3people   unFollowed me")
-x = "unFol"
-p = "U"
-c = x.replace(x[0],(p[0]))
-print(c)
+# solution("3people unFollowed me") # "3people Unfollowed Me"
+solution("qwed    ")
