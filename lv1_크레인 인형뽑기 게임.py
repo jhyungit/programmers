@@ -17,7 +17,6 @@ def solution(board, moves):
 
     return print(answer)
 
-
 solution([[0,0,0,0,0],
           [0,0,1,0,3],
           [0,2,5,0,1],
