@@ -2,7 +2,6 @@
 
 def solution(s):
     x = []
-    
     for i in s:
         if i == "(":
             x.append(i)
