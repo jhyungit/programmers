@@ -22,3 +22,5 @@ def solution(s):
             answer += 1
         x.append(x.pop(0))
     return answer
+
+solution("[](){}")

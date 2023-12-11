@@ -3,6 +3,8 @@
 def solution(n):
     answer = 0
     x = [0,1]
-    for i in range(1, n):
-        x.append(x[i-1] +x[i])
-    return x[-1]%1234567
+    
+    for i in range(n):
+        x.append(x[i]+x[i+1])
+        
+    return x[n] % 1234567

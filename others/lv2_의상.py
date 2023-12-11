@@ -17,6 +17,8 @@ def solution(clothes):
         
     return x-1
 
+solution([["yellow_hat", "headgear"], ["blue_sunglasses", "eyewear"], ["green_turban", "headgear"]]	)
+
 # def solution(clothes):
     
 # #강사님 푼 것
