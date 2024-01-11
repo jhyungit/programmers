@@ -1,0 +1,17 @@
+-- https://school.programmers.co.kr/learn/courses/30/lessons/151139
+
+-- 코드를 입력하세요
+
+# 이렇게도 가능
+# SELECT MONTH(start_date) as MONTH, CAR_ID, COUNT(*) as RECORDS
+
+SELECT DATE_FORMAT(start_date, '%m') as MONTH, CAR_ID, COUNT(*) as RECORDS
+FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
+WHERE CAR_ID IN(
+    SELECT CAR_ID
+    FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
+    WHERE DATE_FORMAT(start_date, '%Y-%m') BETWEEN '2022-08' AND '2022-10'
+    GROUP BY CAR_ID HAVING count(*) >= 5) 
+    AND DATE_FORMAT(start_date, '%Y-%m') BETWEEN '2022-08' AND '2022-10'
+GROUP BY MONTH, CAR_ID
+ORDER BY MONTH, CAR_ID DESC
