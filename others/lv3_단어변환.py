@@ -24,5 +24,5 @@ def solution(begin, target, words):
                     que.append((word,cnt+1))
     return 0
 
-print(solution("AAAA", "AABB", ["AABA", "AABB"]))
-print(solution("hit",	"cog",	["hot", "dot", "dog", "lot", "log", "cog"]))
+print(solution("AAAA", "AABB", ["AABA", "AABB"])) # 2
+print(solution("hit",	"cog",	["hot", "dot", "dog", "lot", "log", "cog"])) # 4
