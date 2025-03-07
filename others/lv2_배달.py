@@ -12,16 +12,15 @@ def solution(N, road, K):
         s_node, e_node, length = r
         graph[s_node].append((e_node,length))
         graph[e_node].append((s_node,length))
-        
+
     
     start = 1 # 1에서 시작
     # 우선순위 큐 primary queue
-    pq = [(start,0)]
+    pq = [(0,start)]
     dist[start] = 0 # 자기 자신까지의 거리는 0
-            
     
     while pq:
-        cur_node, cur_dist = heapq.heappop(pq)
+        cur_dist, cur_node = heapq.heappop(pq)
         
         if dist[cur_node] < cur_dist:
             continue
@@ -31,10 +30,13 @@ def solution(N, road, K):
             
             if distance < dist[next_node]:
                 dist[next_node] = distance
-                heapq.heappush(pq,(next_node,distance))
-    
-    for d in dist:
-        if dist[d] <= K:
+                heapq.heappush(pq,(distance,next_node))
+
+    for v in dist.values():
+        if v <= K:
             answer += 1
     
     return answer
+    
+
+solution(6,[[1,2,1],[1,3,2],[2,3,2],[3,4,3],[3,5,2],[3,5,3],[5,6,1]],4) # 4
