@@ -7,7 +7,7 @@ def solution(tickets):
     
     for ticket in tickets:
         ticket.append(False)
-
+    
     tickets.sort(key = lambda x : x[1])
     way = ['ICN']
     
