@@ -1,0 +1,9 @@
+-- https://school.programmers.co.kr/learn/courses/30/lessons/276034
+
+# 테이블 DEVELOPERS의 SKILL_CODE(2진수) = 테이블 SKILLCODES의 CODE
+# DISTINCT가 중요
+
+SELECT DISTINCT D.ID, D.EMAIL, D.FIRST_NAME, D.LAST_NAME
+FROM DEVELOPERS D, SKILLCODES S
+WHERE (D.SKILL_CODE & S.CODE) > 0 AND S.NAME IN ("C#", "Python")
+ORDER BY D.ID
