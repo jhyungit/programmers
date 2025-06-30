@@ -6,7 +6,7 @@ def solution(board):
     col = len(board[0])
     
     if row == 1 or col == 1:
-        return min(board[0])
+        return max(board[0])
     
     for i in range(1, row):
         for j in range(1, col):
