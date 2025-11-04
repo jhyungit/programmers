@@ -26,3 +26,29 @@ def solution(diffs, times, limit):
             left = mid + 1
     
     return min(result)
+
+
+
+#  아래 코드도 가능
+# def solution(diffs, times, limit):
+#     left, right = 1, max(diffs)
+#     answer = 0
+    
+#     while left <= right:
+#         total = 0
+#         mid = (left + right) // 2
+        
+#         for i, diff in enumerate(diffs):
+#             if mid >= diff:
+#                 total += times[i]
+#             else:
+#                 cnt = diff - mid
+#                 if i != 0:
+#                     total += (times[i] + times[i-1]) * cnt + times[i]
+#         if total <= limit:
+#             answer = mid
+#             right = mid - 1
+#         else:
+#             left = mid + 1
+    
+#     return answer
